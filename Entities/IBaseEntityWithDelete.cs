@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace net7_demo_api.Entities
 {
-    public record IBaseEntityWithDelete : IBaseEntiity
+    public class IBaseEntityWithDelete : IBaseEntity
     {
         // [Column(TypeName = "TimestampTz")]
         public string? DeletedBy { get; set; }
-        public DateTime DeletedAt { get; set; }
+        public DateTime? DeletedAt { get; set; }
         
     }
 }

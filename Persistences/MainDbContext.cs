@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using net7_demo_api.Entities;
 
-namespace net7_demo_api.Persistances
+namespace net7_demo_api.Persistences
 {
-    public class MainDbContext : DbContext//, IMainDbContext
+    public class MainDbContext : DbContext, IMainDbContext
     {
         public DbSet<UserModel> Users {get; set;}
 

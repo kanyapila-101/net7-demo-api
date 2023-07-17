@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace net7_demo_api.Entities
 {
-    public record IBaseEntiity
+    public class IBaseEntity
     {
         // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -15,7 +15,7 @@ namespace net7_demo_api.Entities
         public DateTime CreatedAt { get; set; }
         public string? CreatedBy { get; set; }
         // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; } //= DateTimeOffset.Now;
         public string? UpdatedBy { get; set; }
     }
 }
