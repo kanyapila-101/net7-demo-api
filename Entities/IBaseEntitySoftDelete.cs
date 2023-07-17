@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace net7_demo_api.Entities
 {
-    public class IBaseEntityWithDelete : IBaseEntity
+    public class IBaseEntitySoftDelete : IBaseEntity
     {
         // [Column(TypeName = "TimestampTz")]
         public string? DeletedBy { get; set; }

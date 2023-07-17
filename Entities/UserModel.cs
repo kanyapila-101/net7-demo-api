@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace net7_demo_api.Entities
 {
-    public class UserModel : IBaseEntityWithDelete
+    public class UserModel : IBaseEntitySoftDelete
     {
         public string? UserCode { get; init; }
         public string? UserName { get; init; }

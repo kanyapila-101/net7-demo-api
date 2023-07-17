@@ -14,6 +14,6 @@ namespace net7_demo_api.Repositories
         T Add<T>(T entity) where T : IBaseEntity;
         void Update<T>(T entity) where T : IBaseEntity;
         void UpdateRange<T>(IEnumerable<T> entities) where T : IBaseEntity;
-        void Delete<T>(T entity) where T : IBaseEntityWithDelete;
+        void Delete<T>(T entity) where T : IBaseEntitySoftDelete;
     }
 }

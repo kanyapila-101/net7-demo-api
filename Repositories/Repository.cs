@@ -98,9 +98,9 @@ namespace net7_demo_api.Repositories
             _dbContext.Set<T>().UpdateRange(entities);
         }
 
-        public void Delete<T>(T entity) where T : IBaseEntityWithDelete
+        public void Delete<T>(T entity) where T : IBaseEntitySoftDelete
         {
-            entity.DeletedAt = DateTime.UtcNow;
+            entity.DeletedAt = localToUtc;
             _dbContext.Set<T>().Remove(entity);
         }
 
